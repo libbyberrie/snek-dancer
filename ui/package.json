@@ -1,0 +1,37 @@
+{
+  "name": "snek-dancer-ui",
+  "version": "1.0.0",
+  "description": "React UI Package for Snek-Dancer 🐍",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libbyberrie/snek-dancer.git"
+  },
+  "keywords": [
+    "snek",
+    "django",
+    "react",
+    "python",
+    "curly-boi"
+  ],
+  "author": "Drew Noll, Libby Berrie, Merrin Macleod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libbyberrie/snek-dancer/issues"
+  },
+  "homepage": "https://github.com/libbyberrie/snek-dancer#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}

@@ -1,0 +1,11 @@
+# Core build stuff
+node_modules
+.cache
+dist
+
+# Environment variables
+.env
+
+# Silliness
+.DS_Store
+.ds_store
