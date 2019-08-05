@@ -1,0 +1,22 @@
+[
+    {
+        "model": "farms.farm",
+        "pk": 1,
+        "fields": {
+            "name": "Smol bean farm",
+            "modified": "2018-01-14 00:00:00",
+            "micropythons": 2000,
+            "minipythons": 0
+        }
+    },
+    {
+        "model": "farms.farm",
+        "pk": 2,
+        "fields": {
+            "name": "Oh boi the farm is coming",
+            "modified": "2018-01-14 00:00:00",
+            "micropythons": 4000,
+            "minipythons": 0
+        }
+    }
+]
