@@ -23,3 +23,7 @@ The virtual environment is set up with Python3 and Django in the /snekvenv/ dire
 ```. snekvenv/bin/activate```
 
 Typing `deactivate` will exit you out of the environment.
+
+## Starting the server
+
+To run the server, run `python manage.py runserver`
