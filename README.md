@@ -9,9 +9,22 @@
 # 🎉 Attributions / Acknowledgements
 
 - Inspiration for this game was taken from the fantastic [Kitten Clicker](http://bloodrizer.ru/games/kittens/), which made us all giggle at a hackathon and got us moving, and from the original (& arguably the best game comprised of Clicking On Things to Get More Things), [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/)
+- The Curlyboi is a [PyconAU](https://2019.pycon-au.org) friend. Thanks to Katie McLaughlin for the [SVGs](https://github.com/glasnt/curlyboi) ✨
 
 # 👯‍♂️ Key Contributors
 
 - [Merrin Macleod](http://www.github.com/mermop)
 - [Libby Berrie](http://www.github.com/libbyberrie)
 - [Drew Noll](http://www.github.com/oheydrew)
+
+# ⚙️ Getting Started
+## Accessing the virtual environment
+The virtual environment is set up with Python3 and Django in the /snekvenv/ directory. Enter this in the root directory To start working in the environment:
+
+```. snekvenv/bin/activate```
+
+Typing `deactivate` will exit you out of the environment.
+
+## Starting the server
+
+To run the server, run `python manage.py runserver`
