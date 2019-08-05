@@ -1,11 +1,28 @@
 .snek {
   max-width: 100%;
   display: flex;
+  transition: 0.5s all ease-in-out;
+}
+
+.snek--small {
+  width: 10em;
+}
+.snek--medium {
+  width: 20em;
+}
+.snek--big {
+  width: 30em;
 }
 
 .snektion {
   width: 5%;
   display: inline-block;
+  margin-left: -2.25%;
+  transition: 0.5s all ease-in-out;
+}
+
+.snektion:first-of-type {
+  margin-left: 0;
 }
 
 .snektion--start, .snektion--end {
@@ -19,4 +36,28 @@
 
 .snektion--n {
   align-self: flex-start;
+}
+
+.snek-body {
+  transition: 0.5s fill ease-in-out;
+}
+
+.snektion--green .snek-body {
+  fill: #00b25a;
+}
+
+.snektion--yellow .snek-body {
+  fill: #ffc519;
+}
+
+.snektion--orange .snek-body {
+  fill: #f3703a;
+}
+
+.snektion--red .snek-body {
+  fill: #e11d43;
+}
+
+.snektion--purple .snek-body {
+  fill: #5b57a6;
 }
