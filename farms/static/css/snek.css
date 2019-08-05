@@ -1,0 +1,22 @@
+.snek {
+  max-width: 100%;
+  display: flex;
+}
+
+.snektion {
+  width: 5%;
+  display: inline-block;
+}
+
+.snektion--start, .snektion--end {
+  width: 8%;
+  display: inline-block;
+}
+
+.snektion--u {
+  align-self: flex-end;
+}
+
+.snektion--n {
+  align-self: flex-start;
+}

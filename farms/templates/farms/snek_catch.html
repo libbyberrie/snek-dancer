@@ -1,12 +1,26 @@
-<div class="snektion">
-  {% include "snek-start.svg" %}
-</div>
-<div class="snektion">
-  {% include "snek-n.svg" %}
-</div>
-<div class="snektion">
-  {% include "snek-u.svg" %}
-</div>
-<div class="snektion">
-  {% include "snek-end.svg" %}
-</div>
+<!doctype html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/snek.css' %}">
+</head>
+<body>
+  <div class="snek">
+    <div class="snektion snektion--start">
+      {% include "snek-start.svg" %}
+    </div>
+    <div class="snektion snektion--n">
+      {% include "snek-n.svg" %}
+    </div>
+    <div class="snektion snektion--u">
+      {% include "snek-u.svg" %}
+    </div>
+    <div class="snektion snektion--n">
+      {% include "snek-n.svg" %}
+    </div>
+    <div class="snektion snektion--end">
+      {% include "snek-end.svg" %}
+    </div>
+  </div>
+</body>
+</html>
