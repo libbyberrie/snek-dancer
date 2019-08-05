@@ -13,5 +13,5 @@
 # 👯‍♂️ Key Contributors
 
 - [Merrin Macleod](http://www.github.com/mermop)
-- [Libbie Berrie](http://www.github.com/libbyberrie)
+- [Libby Berrie](http://www.github.com/libbyberrie)
 - [Drew Noll](http://www.github.com/oheydrew)
