@@ -38,26 +38,34 @@
   align-self: flex-start;
 }
 
-.snek-body {
-  transition: 0.5s fill ease-in-out;
+.snektion .snek-body {
+  animation: one-animated 5s step-end infinite;
 }
-
-.snektion--green .snek-body {
-  fill: #00b25a;
+.snektion:nth-of-type(5n+1) .snek-body {
+  animation-delay: -4s;
 }
-
-.snektion--yellow .snek-body {
-  fill: #ffc519;
+.snektion:nth-of-type(5n+2) .snek-body {
+  animation-delay: -3s;
 }
-
-.snektion--orange .snek-body {
-  fill: #f3703a;
+.snektion:nth-of-type(5n+3) .snek-body {
+  animation-delay: -2s;
 }
-
-.snektion--red .snek-body {
-  fill: #e11d43;
+.snektion:nth-of-type(5n+4) .snek-body {
+  animation-delay: -1s;
 }
-
-.snektion--purple .snek-body {
-  fill: #5b57a6;
+/* "00b25a","ffc519","f3703a","e11d43","5b57a6" */
+:root {
+  --purple: #5b57a6;
+  --green: #00b25a;
+  --orange: #f3703a;
+  --yellow: #ffc519;
+  --red: #e11d43;
+}
+@keyframes one-animated {
+  0% { fill: var(--green); }
+  20% { fill: var(--yellow); }
+  40% { fill: var(--orange); }
+  60% { fill: var(--red); }
+  80% { fill: var(--purple); }
+  100% { fill: var(--green); }
 }
