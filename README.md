@@ -15,3 +15,11 @@
 - [Merrin Macleod](http://www.github.com/mermop)
 - [Libby Berrie](http://www.github.com/libbyberrie)
 - [Drew Noll](http://www.github.com/oheydrew)
+
+# ⚙️ Getting Started
+## Accessing the virtual environment
+The virtual environment is set up with Python3 and Django in the /snekvenv/ directory. Enter this in the root directory To start working in the environment: 
+
+```. snekvenv/bin/activate```
+
+Typing `deactivate` will exit you out of the environment.
