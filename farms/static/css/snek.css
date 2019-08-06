@@ -1,3 +1,11 @@
+:root {
+  --purple: #5b57a6;
+  --green: #00b25a;
+  --orange: #f3703a;
+  --yellow: #ffc519;
+  --red: #e11d43;
+}
+
 .snek {
   max-width: 100%;
   display: flex;
@@ -52,13 +60,6 @@
 }
 .snektion:nth-of-type(5n+4) .snek-body {
   animation-delay: -1s;
-}
-:root {
-  --purple: #5b57a6;
-  --green: #00b25a;
-  --orange: #f3703a;
-  --yellow: #ffc519;
-  --red: #e11d43;
 }
 @keyframes one-animated {
   0% { fill: var(--green); }
