@@ -5,7 +5,13 @@
   --yellow: #ffc519;
   --red: #e11d43;
 }
-
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+.container {
+  max-width: 40em;
+  margin: 0 auto;
+}
 .snek {
   max-width: 100%;
   display: flex;
