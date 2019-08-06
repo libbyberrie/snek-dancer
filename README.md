@@ -28,3 +28,4 @@ Typing `deactivate` will exit you out of the environment.
 ## Starting the server
 
 To run the server, run `python manage.py runserver`
+To compile the JS, run `npm run dev`
