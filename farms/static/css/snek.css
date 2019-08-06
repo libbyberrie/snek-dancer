@@ -16,6 +16,10 @@ h1 {
   max-width: 40em;
   margin: 0 auto;
 }
+.micropythons {
+  display: flex;
+  flex-wrap: wrap;
+}
 .snek {
   max-width: 100%;
   display: flex;

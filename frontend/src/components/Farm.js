@@ -2,12 +2,18 @@ import React, {useState} from "react";
 import Snek from "./Snek";
 
 const Farm = (props) => {
-  const [state, setState] = useState(props.farm) 
+  const [state, setState] = useState(props.farm)
   const {name, micropythons, curlyboi_snektions} = state
   console.log("Data", state);
   const updateSneks = () => {
     setState(
         {...state, micropythons: state.micropythons += 1}
+      )
+    console.log("New state: ", state)
+  }
+  const updateCurlyboi = () => {
+    setState(
+        {...state, curlyboi_snektions: state.curlyboi_snektions += 1}
       )
     console.log("New state: ", state)
   }
@@ -28,9 +34,12 @@ const Farm = (props) => {
         <h1>Welcome to {name} farm</h1>
         <p>You have collected {micropythons} micropythons</p>
         <button onClick={updateSneks}>Moar sneks, please!</button>
-      </div>      
+        <button onClick={updateCurlyboi}>Increase the largeness of the boi!</button>
+      </div>
       <h2>Micropythons</h2>
-      { micropython_array }
+      <div className="micropythons">
+        { micropython_array }
+      </div>
       <h2>Curlyboi</h2>
       { curlyboi }
     </div>
