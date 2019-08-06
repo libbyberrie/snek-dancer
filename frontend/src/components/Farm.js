@@ -14,8 +14,6 @@ const Farm = ({ farm }) => {
     farm ? setState(farm) : null
     }, []
   )
-
-  console.log("Data", state);
   const updateSneks = () => {
     let micros = state.micropythons;
     let boi = state.curlyboi_snektions;
@@ -28,10 +26,8 @@ const Farm = ({ farm }) => {
       setState(
         { ...state, micropythons: micros, curlyboi_snektions: boi }
       )
-    console.log("New state: ", state)
   }
 
-  console.log("Data", state);
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
