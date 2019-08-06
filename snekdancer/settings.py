@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'farms',
     'rest_framework',
+    'frontend',
 ]
 
 MIDDLEWARE = [
