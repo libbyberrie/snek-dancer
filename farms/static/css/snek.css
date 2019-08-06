@@ -8,6 +8,10 @@
 body {
   font-family: 'PT Sans', sans-serif;
 }
+h1 {
+  color: var(--green);
+  font-size: 2rem;
+}
 .container {
   max-width: 40em;
   margin: 0 auto;
