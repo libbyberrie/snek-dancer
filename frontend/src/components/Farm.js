@@ -1,21 +1,37 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Snek from "./Snek";
 
-const Farm = (props) => {
-  const [state, setState] = useState(props.farm)
+const Farm = ({ farm }) => {
+  const defaultValues = {
+    micropythons: 0,
+    curlyboi_snektions: 0
+  }
+
+  const [state, setState] = useState(defaultValues)
   const {name, micropythons, curlyboi_snektions} = state
+
+  useEffect(() => {
+    farm ? setState(farm) : null
+    }, []
+  )
+
   console.log("Data", state);
   const updateSneks = () => {
-    setState(
-        if (micropythons <= 10 ) {
-          {...state, micropythons: state.micropythons += 1}
-        } else  {
-          {...state, micropythons: 0}
-          {...state, curlyboi_snektions: state.curlyboi_snektions += 1} 
-        }
+    let micros = state.micropythons;
+    let boi = state.curlyboi_snektions;
+      if (micros < 10 ) {
+        micros += 1;
+      } else  {
+        micros = 0;
+        boi += 1;
+      }
+      setState(
+        { ...state, micropythons: micros, curlyboi_snektions: boi }
       )
     console.log("New state: ", state)
   }
+
+  console.log("Data", state);
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
@@ -23,7 +39,7 @@ const Farm = (props) => {
   }
 
   if(state.curlyboi_snektions > 0) {
-    curlyboi = <Snek size={3} length={curlyboi_snektions} />
+    curlyboi = <Snek size={3} length={state.curlyboi_snektions} />
   }
 
   return(
@@ -39,6 +55,7 @@ const Farm = (props) => {
       </div>
       <h2>Curlyboi</h2>
       { curlyboi }
+      <p>You have cultivated a curlyboi that is {curlyboi_snektions} units long. That's a solid effort!</p>
     </div>
   )
 }
