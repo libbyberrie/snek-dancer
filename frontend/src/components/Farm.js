@@ -3,7 +3,7 @@ import Snek from "./Snek";
 
 const Farm = (props) => {
   const [state, setState] = useState(props.farm) 
-  const {micropythons, curlyboi_snektions} = state
+  const {name, micropythons, curlyboi_snektions} = state
   console.log("Data", state);
   const updateSneks = () => {
     setState(
@@ -25,7 +25,7 @@ const Farm = (props) => {
   return(
     <div>
       <div>
-        <h1>Welcome to your farm</h1>
+        <h1>Welcome to {name} farm</h1>
         <p>You have collected {micropythons} micropythons</p>
         <button onClick={updateSneks}>Moar sneks, please!</button>
       </div>      
