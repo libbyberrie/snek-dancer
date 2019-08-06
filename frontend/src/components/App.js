@@ -7,6 +7,10 @@ const App = () => (
   <div>
     <DataProvider endpoint="api/farm"
                   render={data => <Table data={data} />} />
+    <Snek size={1} length={5} />
+    <Snek size={1} length={5} />
+    <Snek size={1} length={5} />
+    <Snek size={1} length={5} />
     <Snek size={3} length={20} />
   </div>
 );

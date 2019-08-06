@@ -47,18 +47,34 @@
 }
 
 .snektion .snek-body {
-  animation: one-animated 5s step-end infinite;
+  fill: var(--purple);
 }
 .snektion:nth-of-type(5n+1) .snek-body {
-  animation-delay: -4s;
+  fill: var(--green);
 }
 .snektion:nth-of-type(5n+2) .snek-body {
-  animation-delay: -3s;
+  fill: var(--yellow);
 }
 .snektion:nth-of-type(5n+3) .snek-body {
-  animation-delay: -2s;
+  fill: var(--orange);
 }
 .snektion:nth-of-type(5n+4) .snek-body {
+  fill: var(--red);
+}
+
+.snek--3 .snektion .snek-body {
+  animation: one-animated 5s step-end infinite;
+}
+.snek--3 .snektion:nth-of-type(5n+1) .snek-body {
+  animation-delay: -4s;
+}
+.snek--3 .snektion:nth-of-type(5n+2) .snek-body {
+  animation-delay: -3s;
+}
+.snek--3 .snektion:nth-of-type(5n+3) .snek-body {
+  animation-delay: -2s;
+}
+.snek--3 .snektion:nth-of-type(5n+4) .snek-body {
   animation-delay: -1s;
 }
 @keyframes one-animated {
