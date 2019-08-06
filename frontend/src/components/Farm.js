@@ -7,17 +7,15 @@ const Farm = (props) => {
   console.log("Data", state);
   const updateSneks = () => {
     setState(
-        {...state, micropythons: state.micropythons += 1}
+        if (micropythons <= 10 ) {
+          {...state, micropythons: state.micropythons += 1}
+        } else  {
+          {...state, micropythons: 0}
+          {...state, curlyboi_snektions: state.curlyboi_snektions += 1} 
+        }
       )
     console.log("New state: ", state)
   }
-  const updateCurlyboi = () => {
-    setState(
-        {...state, curlyboi_snektions: state.curlyboi_snektions += 1}
-      )
-    console.log("New state: ", state)
-  }
-  console.log("Data", state);
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
@@ -34,7 +32,6 @@ const Farm = (props) => {
         <h1>Welcome to {name} farm</h1>
         <p>You have collected {micropythons} micropythons</p>
         <button onClick={updateSneks}>Moar sneks, please!</button>
-        <button onClick={updateCurlyboi}>Increase the largeness of the boi!</button>
       </div>
       <h2>Micropythons</h2>
       <div className="micropythons">
