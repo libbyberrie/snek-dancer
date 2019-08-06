@@ -53,7 +53,6 @@
 .snektion:nth-of-type(5n+4) .snek-body {
   animation-delay: -1s;
 }
-/* "00b25a","ffc519","f3703a","e11d43","5b57a6" */
 :root {
   --purple: #5b57a6;
   --green: #00b25a;
