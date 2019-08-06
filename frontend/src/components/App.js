@@ -9,11 +9,6 @@ const App = () => (
                 render={data => <div>
                 	<Farm farm={data[0]}/>
                 	<Table data={data} />
-            	    <Snek size={1} length={5} />
-				    <Snek size={1} length={5} />
-				    <Snek size={1} length={5} />
-				    <Snek size={1} length={5} />
-				    <Snek size={3} length={20} />
             	</div>} />
 );
 const wrapper = document.getElementById("app");
