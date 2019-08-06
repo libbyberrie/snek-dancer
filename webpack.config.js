@@ -1,4 +1,8 @@
 module.exports = {
+  watch: true,
+  watchOptions: {
+    ignored: [".vscode", "node_modules", "*/__pycache__"]
+  },
   module: {
     rules: [
       {
