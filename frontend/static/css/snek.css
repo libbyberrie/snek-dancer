@@ -12,13 +12,13 @@
   transition: 0.5s all ease-in-out;
 }
 
-.snek--0 {
+.snek--small {
   width: 10em;
 }
-.snek--1 {
+.snek--medium {
   width: 20em;
 }
-.snek--2 {
+.snek--big {
   width: 30em;
 }
 
@@ -47,34 +47,18 @@
 }
 
 .snektion .snek-body {
-  fill: var(--purple);
-}
-.snektion:nth-of-type(5n+1) .snek-body {
-  fill: var(--green);
-}
-.snektion:nth-of-type(5n+2) .snek-body {
-  fill: var(--yellow);
-}
-.snektion:nth-of-type(5n+3) .snek-body {
-  fill: var(--orange);
-}
-.snektion:nth-of-type(5n+4) .snek-body {
-  fill: var(--red);
-}
-
-.snek--3 .snektion .snek-body {
   animation: one-animated 5s step-end infinite;
 }
-.snek--3 .snektion:nth-of-type(5n+1) .snek-body {
+.snektion:nth-of-type(5n+1) .snek-body {
   animation-delay: -4s;
 }
-.snek--3 .snektion:nth-of-type(5n+2) .snek-body {
+.snektion:nth-of-type(5n+2) .snek-body {
   animation-delay: -3s;
 }
-.snek--3 .snektion:nth-of-type(5n+3) .snek-body {
+.snektion:nth-of-type(5n+3) .snek-body {
   animation-delay: -2s;
 }
-.snek--3 .snektion:nth-of-type(5n+4) .snek-body {
+.snektion:nth-of-type(5n+4) .snek-body {
   animation-delay: -1s;
 }
 @keyframes one-animated {
