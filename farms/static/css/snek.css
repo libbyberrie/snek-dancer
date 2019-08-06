@@ -12,13 +12,13 @@
   transition: 0.5s all ease-in-out;
 }
 
-.snek--small {
+.snek--0 {
   width: 10em;
 }
-.snek--medium {
+.snek--1 {
   width: 20em;
 }
-.snek--big {
+.snek--2 {
   width: 30em;
 }
 
