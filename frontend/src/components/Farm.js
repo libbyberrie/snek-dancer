@@ -14,6 +14,18 @@ const Farm = ({ farm }) => {
     farm ? setState(farm) : null
     }, []
   )
+
+  const handleSubmit = () {
+    e.preventDefault();
+    const farm = { state.name, state.micropythons, state.curlyboi_snektions };
+    const conf = {
+      method: "post",
+      body: JSON.stringify(farm),
+      headers: new Headers({ "Content-Type": "application/json" })
+    };
+    fetch('/api/farm', conf).then(response => console.log(response));
+  };
+
   const updateSneks = () => {
     let micros = state.micropythons;
     let boi = state.curlyboi_snektions;
@@ -42,6 +54,7 @@ const Farm = ({ farm }) => {
     <div>
       <div>
         <h1>Welcome to {name} farm</h1>
+        <button onClick={handleSubmit}>Save your farm</button>
         <p>You have collected {micropythons} micropythons</p>
         <button onClick={updateSneks}>Moar sneks, please!</button>
       </div>
