@@ -5,7 +5,7 @@ import Table from "./Table";
 import Snek from "./Snek";
 import Farm from "./Farm";
 const App = () => (
-  <DataProvider endpoint="api/farm"
+  <DataProvider endpoint="api/farm" 
                 render={data => <div>
                 	<Farm farm={data[0]}/>
                 	<Table data={data} />
