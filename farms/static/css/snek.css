@@ -1,0 +1,71 @@
+:root {
+  --purple: #5b57a6;
+  --green: #00b25a;
+  --orange: #f3703a;
+  --yellow: #ffc519;
+  --red: #e11d43;
+}
+
+.snek {
+  max-width: 100%;
+  display: flex;
+  transition: 0.5s all ease-in-out;
+}
+
+.snek--small {
+  width: 10em;
+}
+.snek--medium {
+  width: 20em;
+}
+.snek--big {
+  width: 30em;
+}
+
+.snektion {
+  width: 5%;
+  display: inline-block;
+  margin-left: -2.25%;
+  transition: 0.5s all ease-in-out;
+}
+
+.snektion:first-of-type {
+  margin-left: 0;
+}
+
+.snektion--start, .snektion--end {
+  width: 8%;
+  display: inline-block;
+}
+
+.snektion--u {
+  align-self: flex-end;
+}
+
+.snektion--n {
+  align-self: flex-start;
+}
+
+.snektion .snek-body {
+  animation: one-animated 5s step-end infinite;
+}
+.snektion:nth-of-type(5n+1) .snek-body {
+  animation-delay: -4s;
+}
+.snektion:nth-of-type(5n+2) .snek-body {
+  animation-delay: -3s;
+}
+.snektion:nth-of-type(5n+3) .snek-body {
+  animation-delay: -2s;
+}
+.snektion:nth-of-type(5n+4) .snek-body {
+  animation-delay: -1s;
+}
+@keyframes one-animated {
+  0% { fill: var(--green); }
+  20% { fill: var(--yellow); }
+  40% { fill: var(--orange); }
+  60% { fill: var(--red); }
+  80% { fill: var(--purple); }
+  100% { fill: var(--green); }
+}
