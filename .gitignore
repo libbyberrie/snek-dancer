@@ -107,4 +107,5 @@ venv.bak/
 # asdf version manager settings
 .tool-versions
 
-
+#MacOS is weird. 
+.DS_Store
