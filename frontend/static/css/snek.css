@@ -5,7 +5,6 @@
   --yellow: #ffc519;
   --red: #e11d43;
 }
-
 body {
   font-family: 'PT Sans', sans-serif;
 }
@@ -13,89 +12,112 @@ h1 {
   color: var(--green);
   font-size: 2rem;
 }
-
 .container {
   max-width: 40em;
   margin: 0 auto;
 }
-
 .micropythons {
   display: flex;
   flex-wrap: wrap;
 }
+.micropythons .snek {
+  margin-right: 0.5em;
+}
 
+/* The snek */
 .snek {
   max-width: 100%;
   display: flex;
+  justify-content: flex-end;
   transition: 0.5s all ease-in-out;
 }
 .snek--micropython {
+  /* He smol */
   font-size: 1rem;
 }
 .snek--curlyboi {
+  /* He large */
   font-size: 5rem;
 }
-.snektion {
-  width: 1em;
-  display: inline-block;
-  margin-left: -0.45em;
-}
 
+/* Snektions */
+.snektion {
+  display: inline-block;
+  width: 1.8em;
+  /* in proportion to SVG viewbox, which is 180 */
+  margin-left: -1.2em;
+  transition: 0.5s margin-left ease-in-out;
+}
+.snektion--start, .snektion--end {
+  width: 2.4em;
+  /* in proportion to SVG viewbox, which is 240 */
+}
+.up-false .snektion {
+  margin-left: -0.4em;
+}
 .snektion:first-of-type {
   margin-left: 0;
 }
-
-.snektion--start, .snektion--end {
-  width: 1.6em;
-  display: inline-block;
+.snektion:nth-of-type(2) {
+  /* The snektion next to the start snektion */
+  /* has further to go */
+  margin-left: -1.4em;
+}
+.up-false .snektion:nth-of-type(2) {
+  margin-left: -1em;
 }
 
-.snektion--u {
-  align-self: flex-end;
-  transition: 2s all ease-in;
+/* Animation of snake body */
+.snake-body {
+  transition: 0.5s all ease-in;
+}
+.up-false .snektion--u .snake-body, .up-false .snektion--start .snake-body {
+  /* When going from flat to curly, the n snektions have further to go */
+  /* than the u snektions*/
+  transition: 0.5s all ease-out;
+}
+.up-true .snektion--n .snake-body {
+  transition: 0.5s all ease-out;
 }
 
-.snektion--n {
-  align-self: flex-start;
-  transition: 2s all ease-out;
+/* Rainbow snektions */
+.snektion .snake-body {
+  stroke: var(--purple);
+}
+.snektion:nth-of-type(5n+1) .snake-body {
+  stroke: var(--green);
+}
+.snektion:nth-of-type(5n+2) .snake-body {
+  stroke: var(--yellow);
+}
+.snektion:nth-of-type(5n+3) .snake-body {
+  stroke: var(--orange);
+}
+.snektion:nth-of-type(5n+4) .snake-body {
+  stroke: var(--red);
 }
 
-.snektion .snek-body {
-  fill: var(--purple);
-}
-.snektion:nth-of-type(5n+1) .snek-body {
-  fill: var(--green);
-}
-.snektion:nth-of-type(5n+2) .snek-body {
-  fill: var(--yellow);
-}
-.snektion:nth-of-type(5n+3) .snek-body {
-  fill: var(--orange);
-}
-.snektion:nth-of-type(5n+4) .snek-body {
-  fill: var(--red);
-}
-
-.snek--curlyboi .snektion .snek-body {
+/* Animated snektions */
+.snek--animated .snektion .snake-body {
   animation: one-animated 5s step-end infinite;
 }
-.snek--curlyboi .snektion:nth-of-type(5n+1) .snek-body {
+.snek--animated .snektion:nth-of-type(5n+1) .snake-body {
   animation-delay: -4s;
 }
-.snek--curlyboi .snektion:nth-of-type(5n+2) .snek-body {
+.snek--animated .snektion:nth-of-type(5n+2) .snake-body {
   animation-delay: -3s;
 }
-.snek--curlyboi .snektion:nth-of-type(5n+3) .snek-body {
+.snek--animated .snektion:nth-of-type(5n+3) .snake-body {
   animation-delay: -2s;
 }
-.snek--curlyboi .snektion:nth-of-type(5n+4) .snek-body {
+.snek--animated .snektion:nth-of-type(5n+4) .snake-body {
   animation-delay: -1s;
 }
 @keyframes one-animated {
-  0% { fill: var(--green); }
-  20% { fill: var(--yellow); }
-  40% { fill: var(--orange); }
-  60% { fill: var(--red); }
-  80% { fill: var(--purple); }
-  100% { fill: var(--green); }
+  0% { stroke: var(--green); }
+  20% { stroke: var(--yellow); }
+  40% { stroke: var(--orange); }
+  60% { stroke: var(--red); }
+  80% { stroke: var(--purple); }
+  100% { stroke: var(--green); }
 }

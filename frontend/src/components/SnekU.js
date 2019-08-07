@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SvgSnekU = ({ up }) => {
-  const downSnek = "M -20 100 C 20 100, 80 100, 120 100"
   const upSnek = "M 20 40 C 10 120, 90 120, 80 40"
+  const downSnek = "M -20 100 C 20 100, 80 100, 120 100"
   return(
     <div className="snektion snektion--u">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -50 180 180">

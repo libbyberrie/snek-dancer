@@ -9,5 +9,3 @@ class FarmListCreate(generics.ListCreateAPIView):
 
 
 # Create your views here.
-def snek_catch(request):
-    return render(request, 'farms/snek_catch.html', {})
