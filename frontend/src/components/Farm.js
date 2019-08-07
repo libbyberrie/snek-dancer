@@ -37,17 +37,6 @@ const Farm = ({ farm }) => {
     )
   }
 
-<<<<<<< HEAD
-  let micropython_array = [];
-  let curlyboi = null;
-  for (var i = 0; i < micropythons; i++) {
-    micropython_array.push(<Snek size="micropython" length={5} />)
-  }
-
-  if(state.curlyboi_snektions > 0) {
-    curlyboi = <Snek size="curlyboi" length={state.curlyboi_snektions} />
-  }
-=======
   const Micropythons = () => {
     let micropys = [];
     for (var i = 0; i < micropythons; i++) {
@@ -60,10 +49,11 @@ const Farm = ({ farm }) => {
     )
   }
 
-  const Curlyboi = () => state.curlyboi_snektions > 0
+  const Curlyboi = () => (
+    state.curlyboi_snektions > 0
     ? <Snek size="big" length={state.curlyboi_snektions} />
     : null
->>>>>>> :art: Do flexbox layouts and colors - move css into frontend/static for simplicity
+  )
 
   return(
     <div>

@@ -5,10 +5,10 @@ import Table from "./Table";
 import Farm from "./Farm";
 
 const App = () => (
-	<DataProvider
-	  endpoint="api/farm"
+  <DataProvider
+    endpoint="api/farm"
     render={data => (
-		  <div className="wrapper--container">
+      <div className="wrapper--container">
         <Farm farm={data[0]}/>
         <Table data={data} />
       </div>)}
