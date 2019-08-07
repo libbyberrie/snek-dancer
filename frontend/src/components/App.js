@@ -8,7 +8,7 @@ const App = () => (
 	<DataProvider
 	  endpoint="api/farm"
     render={data => (
-		  <div>
+		  <div className="wrapper--container">
         <Farm farm={data[0]}/>
         <Table data={data} />
       </div>)}

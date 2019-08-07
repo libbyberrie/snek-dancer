@@ -37,6 +37,7 @@ const Farm = ({ farm }) => {
     )
   }
 
+<<<<<<< HEAD
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
@@ -46,21 +47,45 @@ const Farm = ({ farm }) => {
   if(state.curlyboi_snektions > 0) {
     curlyboi = <Snek size="curlyboi" length={state.curlyboi_snektions} />
   }
+=======
+  const Micropythons = () => {
+    let micropys = [];
+    for (var i = 0; i < micropythons; i++) {
+      micropys.push(<Snek key={i} size="medium" length={5} />)
+    }
+    return(
+      <div className="micropythons">
+        {micropys}
+      </div>
+    )
+  }
+
+  const Curlyboi = () => state.curlyboi_snektions > 0
+    ? <Snek size="big" length={state.curlyboi_snektions} />
+    : null
+>>>>>>> :art: Do flexbox layouts and colors - move css into frontend/static for simplicity
 
   return(
     <div>
-      <div>
-        <h1>Welcome to {name} farm</h1>
-        <p>You have collected {micropythons} micropythons</p>
-        <button onClick={updateSneks}>Moar sneks, please!</button>
+      <header>
+        <h1>Welcome to {name} Farm</h1>
+      </header>
+
+      <div className="farm farm--flexContainer">
+        <section className="farm farm--buttons">
+          <button onClick={updateSneks}>Moar sneks, please!</button>
+        </section>
+
+        <section className="farm farm--longGrass">
+          <Micropythons/>
+          <Curlyboi/>
+        </section>
+
+        <section className="farm farm--snekBoard">
+          <p>Micropythons: {micropythons}</p>
+          <p>Curlyboi Length: {curlyboi_snektions}</p>
+        </section>
       </div>
-      <h2>Micropythons</h2>
-      <div className="micropythons">
-        { micropython_array }
-      </div>
-      <h2>Curlyboi</h2>
-      { curlyboi }
-      <p>You have cultivated a curlyboi that is {curlyboi_snektions} units long. That's a solid effort!</p>
     </div>
   )
 }
