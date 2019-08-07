@@ -6,19 +6,20 @@ import SnekEnd from "./SnekEnd"
 import SnekN from "./SnekN"
 import SnekU from "./SnekU"
 
-const Snektion = ({ position }) => {
+const Snektion = ({ position, up }) => {
   if(position == 0) {
-    return(<SnekStart />);
+    return(<SnekStart up={up} />);
   } else if(position == -1) {
-    return(<SnekEnd />);
+    return(<SnekEnd up={up} />);
   } else if(position%2 == 1) {
-    return(<SnekN />);
+    return(<SnekN up={up} />);
   } else {
-    return(<SnekU />);
+    return(<SnekU up={up} />);
   }
 }
 Snektion.propTypes = {
-  position: PropTypes.number.isRequired
+  position: PropTypes.number.isRequired,
+  up: PropTypes.bool.isRequired
 };
 
 export default Snektion;
