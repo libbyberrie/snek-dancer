@@ -25,6 +25,7 @@ wheels/
 *.egg
 MANIFEST
 node_modules/
+frontend/static/frontend/main.js
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -107,5 +108,8 @@ venv.bak/
 # asdf version manager settings
 .tool-versions
 
-#MacOS is weird. 
+#MacOS is weird.
 .DS_Store
+
+# VSCode Settings
+.vscode
