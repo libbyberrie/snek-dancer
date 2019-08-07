@@ -39,7 +39,6 @@ h1 {
   width: 1em;
   display: inline-block;
   margin-left: -0.45em;
-  transition: 0.5s all ease-in-out;
 }
 
 .snektion:first-of-type {
@@ -53,10 +52,12 @@ h1 {
 
 .snektion--u {
   align-self: flex-end;
+  transition: 2s all ease-in;
 }
 
 .snektion--n {
   align-self: flex-start;
+  transition: 2s all ease-out;
 }
 
 .snektion .snek-body {

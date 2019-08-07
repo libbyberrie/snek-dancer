@@ -33,39 +33,38 @@ h1 {
 .snek--curlyboi {
   font-size: 5rem;
 }
+
 .snektion {
-  width: 1.4em;
   display: inline-block;
-  margin-left: -0.8em;
-  transition: 0.5s all ease-in-out;
+  width: 1.8em;
+  margin-left: -1.2em;
+  transition: 0.5s margin-left ease-in-out;
+}
+.snektion--start, .snektion--end {
+  width: 2.4em;
 }
 .up-false .snektion {
   margin-left: -0.4em;
 }
-
 .snektion:first-of-type {
   margin-left: 0;
 }
 .snektion:nth-of-type(2) {
-  margin-left: -1em;
+  margin-left: -1.4em;
 }
 .up-false .snektion:nth-of-type(2) {
-  margin-left: -0.8em;
+  margin-left: -1em;
 }
 
-
-.snektion--start, .snektion--end {
-  width: 2em;
-  display: inline-block;
+.up-false .snektion--u .snake-body, .up-false .snektion--start .snake-body {
+  transition: 0.5s all ease-out;
 }
-
-/* .snektion--u {
-  align-self: flex-end;
+.up-true .snektion--n .snake-body {
+  transition: 0.5s all ease-out;
 }
-
-.snektion--n {
-  align-self: flex-start;
-} */
+.snake-body {
+  transition: 0.5s all ease-in;
+}
 
 .snektion .snek-body {
   fill: var(--purple);
@@ -85,7 +84,6 @@ h1 {
 
 .snektion .snake-body {
   stroke: var(--purple);
-  transition: 0.5s ease-out;
 }
 .snektion:nth-of-type(5n+1) .snake-body {
   stroke: var(--green);
