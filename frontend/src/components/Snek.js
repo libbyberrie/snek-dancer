@@ -16,7 +16,7 @@ const Snek = ({ size, length }) => {
 }
 
 Snek.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
   length: PropTypes.number.isRequired
 };
 
