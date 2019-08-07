@@ -23,6 +23,7 @@ h1 {
 .snek {
   max-width: 100%;
   display: flex;
+  justify-content: flex-end;
   transition: 0.5s all ease-in-out;
 }
 .snek--micropython {
