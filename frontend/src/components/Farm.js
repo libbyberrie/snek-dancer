@@ -50,8 +50,8 @@ const Farm = ({ farm }) => {
   }
 
   const Curlyboi = () => (
-    state.curlyboi_snektions > 0
-    ? <Snek size="curlyboi" length={state.curlyboi_snektions} />
+    curlyboi_snektions > 0
+    ? <Snek size="curlyboi" length={curlyboi_snektions} />
     : null
   )
 
@@ -59,9 +59,10 @@ const Farm = ({ farm }) => {
     <div>
       <header>
         <h1>Welcome to {name} Farm</h1>
+        { curlyboi_snektions > 0 && <p>You have cultivated a curlyboi that is {curlyboi_snektions} units long. That's a solid effort!</p>}
       </header>
 
-      <div className="farm farm--flexContainer">
+      <div className="farm">
         <section className="farm-section farm-buttons">
           <button onClick={updateSneks}>Moar sneks, please!</button>
         </section>
