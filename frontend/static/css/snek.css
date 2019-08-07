@@ -10,7 +10,6 @@
   --red: #e11d43;
 }
 
-<<<<<<< HEAD
 html {
   box-sizing: border-box;
 }
@@ -39,15 +38,16 @@ h1 {
 }
 
 .farm {
-  border: 2px solid var(--purple);
+  padding: 0.15em 0 0.15em 0;
   border-radius: 0.75em;
   background-color: var(--purple);
 }
 
 .farm-section {
-  margin: .75em;
-  padding: .75em;
-  background-color: var(--color-bg-alt);
+  margin: 0.75em;
+  padding: 0.75em;
+  border-radius: 0.75em;
+  background-color: white;
 }
 
 .farm-buttons {

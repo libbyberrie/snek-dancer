@@ -51,7 +51,7 @@ const Farm = ({ farm }) => {
 
   const Curlyboi = () => (
     state.curlyboi_snektions > 0
-    ? <Snek size="big" length={state.curlyboi_snektions} />
+    ? <Snek size="curlyboi" length={state.curlyboi_snektions} />
     : null
   )
 
@@ -62,16 +62,16 @@ const Farm = ({ farm }) => {
       </header>
 
       <div className="farm farm--flexContainer">
-        <section className="farm farm--buttons">
+        <section className="farm-section farm-buttons">
           <button onClick={updateSneks}>Moar sneks, please!</button>
         </section>
 
-        <section className="farm farm--longGrass">
+        <section className="farm-section farm-long-grass">
           <Micropythons/>
           <Curlyboi/>
         </section>
 
-        <section className="farm farm--snekBoard">
+        <section className="farm-section farm-snek-board">
           <p>Micropythons: {micropythons}</p>
           <p>Curlyboi Length: {curlyboi_snektions}</p>
         </section>
