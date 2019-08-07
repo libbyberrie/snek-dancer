@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Snek from "./Snek";
+import Snek from "./Snek/";
 
 const Farm = ({ farm }) => {
-  const defaultValues = {
+  const initialState = {
     micropythons: 0,
     curlyboi_snektions: 0
   }
 
-  const [state, setState] = useState(defaultValues)
+  const [state, setState] = useState(initialState)
   const {name, micropythons, curlyboi_snektions} = state
 
   useEffect(() => {
@@ -15,23 +15,28 @@ const Farm = ({ farm }) => {
     }, []
   )
 
-  console.log("Data", state);
+  // Log out the state when it changes
+  useEffect(() => {
+    console.log("Updated State:", state)
+    }, [state]
+  )
+
   const updateSneks = () => {
     let micros = state.micropythons;
     let boi = state.curlyboi_snektions;
-      if (micros < 10 ) {
-        micros += 1;
-      } else  {
-        micros = 0;
-        boi += 1;
-      }
-      setState(
-        { ...state, micropythons: micros, curlyboi_snektions: boi }
-      )
-    console.log("New state: ", state)
+
+    if (micros < 10 ) {
+      micros += 1;
+    } else  {
+      micros = 0;
+      boi += 1;
+    }
+
+    setState(
+      { ...state, micropythons: micros, curlyboi_snektions: boi }
+    )
   }
 
-  console.log("Data", state);
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
