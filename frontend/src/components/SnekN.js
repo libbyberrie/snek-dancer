@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 const SvgSnekN = ({ up }) => {
   const nSnek = "M 20 40 C 10 -40, 90 -40, 80 40"
-  const uSnek = "M 20 40 C 10 120, 90 120, 80 40"
+  const uSnek = "M 0 100 C 20 100, 80 100, 100 100"
   return(
     <div className="snektion snektion--n">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 100 180">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -50 140 180">
     <style></style>
     <path
     stroke-width="40"

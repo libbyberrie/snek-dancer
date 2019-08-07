@@ -9,7 +9,7 @@ const Snek = ({ size, length, up }) => {
     snektion_array.push(<Snektion position={i} key={i} up={up} />)
   }
   return (
-    <div className={"snek snek--" + size }>
+    <div className={"snek snek--" + size + " up-" + up }>
     { snektion_array }
     </div>
   );
