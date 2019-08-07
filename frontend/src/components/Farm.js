@@ -35,11 +35,11 @@ const Farm = ({ farm }) => {
   let micropython_array = [];
   let curlyboi = null;
   for (var i = 0; i < micropythons; i++) {
-    micropython_array.push(<Snek size={1} length={5} />)
+    micropython_array.push(<Snek size="micropython" length={5} />)
   }
 
   if(state.curlyboi_snektions > 0) {
-    curlyboi = <Snek size={3} length={state.curlyboi_snektions} />
+    curlyboi = <Snek size="curlyboi" length={state.curlyboi_snektions} />
   }
 
   return(
