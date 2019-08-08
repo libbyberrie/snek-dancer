@@ -9,3 +9,4 @@ pytz==2019.2
 sqlparse==0.3.0
 djangorestframework~=3.10.2
 gunicorn==19.9.0
+whitenoise==4.1.3
