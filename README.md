@@ -8,6 +8,9 @@
 
 ## ⚙️ Getting Started
 
+Copy the environment variables file:
+- `cp .env.example .env`
+
 ### Accessing the virtual environment
 
 The virtual environment is set up with Python3 and Django in the /snekvenv/ directory. You may need to create this for your own machine's settings and python PATH, if so you can do so with:
