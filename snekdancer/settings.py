@@ -25,7 +25,7 @@ SECRET_KEY = '=8qxnrur_k78xy_9%ce1!t+ejg*##91lvdry02=)(fb2&p3-9e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'snek-farm.herokuapp.com']
 
 # Application definition
 
