@@ -6,6 +6,10 @@
 
 **Snek herding** is tough work, but it's honest work. As a young aspiring herder, you've moved out to your new home in sunny **insert_quippy_town_name_here**, to herd yourself some sneks, feed them some bugs, update your pythons, and grow and nurture them into wonderful, glorious Curly Bois.
 
+## Deployment
+
+The master branch of this repository is automatically deployed to https://snek-farm.herokuapp.com/ .
+
 ## ⚙️ Getting Started
 
 Copy the environment variables file:
