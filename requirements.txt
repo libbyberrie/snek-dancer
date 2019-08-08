@@ -7,4 +7,5 @@ pycodestyle==2.5.0
 pyflakes==2.1.1
 pytz==2019.2
 sqlparse==0.3.0
-djangorestframework~=3.10.2	
+djangorestframework~=3.10.2
+gunicorn==19.9.0
