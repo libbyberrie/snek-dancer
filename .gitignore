@@ -25,7 +25,6 @@ wheels/
 *.egg
 MANIFEST
 node_modules/
-frontend/static/frontend/main.js
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -113,3 +112,6 @@ venv.bak/
 
 # VSCode Settings
 .vscode
+
+# Webkit's compiling
+frontend/static/frontend/main.js
