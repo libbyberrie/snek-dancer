@@ -24,29 +24,42 @@ const Farm = ({ farm }) => {
   const updateSneks = () => {
     let micros = state.micropythons;
     let boi = state.curlyboi_snektions;
+    let uppy = state.up;
+      if (micros < 10 ) {
+        micros += 1;
+        uppy = !uppy;
+      } else  {
+        micros = 0;
+        boi += 1;
+        uppy = !uppy;
+      }
+      setState(
+        { ...state, micropythons: micros, curlyboi_snektions: boi, up: uppy }
+      )
+    console.log("New state: ", state)
+  }
 
-    if (micros < 10 ) {
-      micros += 1;
-    } else  {
-      micros = 0;
-      boi += 1;
-    }
-
-    setState(
-      { ...state, micropythons: micros, curlyboi_snektions: boi }
-    )
+  console.log("Data", state);
+  let micropython_array = [];
+  let curlyboi = null;
+  for (var i = 0; i < micropythons; i++) {
+    micropython_array.push(<Snek size="micropython" length={5} up={i%2==0 ? state.up : !state.up}/>)
   }
 
   const Micropythons = () => {
     let micropys = [];
     for (var i = 0; i < micropythons; i++) {
-      micropys.push(<Snek key={i} size="medium" length={5} />)
+      micropys.push(<Snek key={i} size="medium" length={5} up={state.up}/>)
     }
     return(
       <div className="micropythons">
         {micropys}
       </div>
     )
+  }
+
+  if(state.curlyboi_snektions > 0) {
+    curlyboi = <Snek size="curlyboi" length={state.curlyboi_snektions}  up={state.up}/>
   }
 
   const Curlyboi = () => (
@@ -61,7 +74,6 @@ const Farm = ({ farm }) => {
         <h1>Welcome to {name} Farm</h1>
         { curlyboi_snektions > 0 && <p>You have cultivated a curlyboi that is {curlyboi_snektions} units long. That's a solid effort!</p>}
       </header>
-
       <div className="farm">
         <section className="farm-section farm-buttons">
           <button onClick={updateSneks}>Moar sneks, please!</button>
