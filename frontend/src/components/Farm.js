@@ -4,11 +4,12 @@ import Snek from "./Snek/";
 const Farm = ({ farm }) => {
   const initialState = {
     micropythons: 0,
-    curlyboi_snektions: 0
+    curlyboi_snektions: 0,
+    up: true
   }
 
   const [state, setState] = useState(initialState)
-  const {name, micropythons, curlyboi_snektions} = state
+  const {name, micropythons, curlyboi_snektions, up} = state
 
   useEffect(() => {
     farm ? setState(farm) : null
@@ -64,7 +65,7 @@ const Farm = ({ farm }) => {
 
   const Curlyboi = () => (
     curlyboi_snektions > 0
-    ? <Snek size="curlyboi" length={curlyboi_snektions} />
+    ? <Snek size="curlyboi" length={curlyboi_snektions} up={state.up}/>
     : null
   )
 
