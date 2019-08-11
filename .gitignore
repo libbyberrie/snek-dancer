@@ -87,6 +87,7 @@ celerybeat-schedule
 .venv
 env/
 venv/
+snekvenv/
 ENV/
 env.bak/
 venv.bak/
@@ -112,6 +113,3 @@ venv.bak/
 
 # VSCode Settings
 .vscode
-
-# Webkit's compiling
-frontend/static/frontend/main.js
