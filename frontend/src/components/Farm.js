@@ -63,7 +63,7 @@ const Farm = ({ farm }) => {
     <div>
       <header>
         <h1>Welcome to {name} Farm</h1>
-        { curlyboi_snektions > 0 && <p>You have cultivated a curlyboi that is {curlyboi_snektions} units long. That's a solid effort!</p>}
+        { curlyboi_snektions > 0 && <p>You have cultivated a curlyboi that is {curlyboi_snektions} snektions long. That's a solid effort!</p>}
       </header>
       <div className="farm">
         <section className="farm-section farm-buttons">
