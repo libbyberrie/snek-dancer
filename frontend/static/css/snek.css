@@ -55,6 +55,19 @@ h1 {
   justify-content: center;
 }
 
+.btn-large {
+  padding: 2em;
+  border: 2px solid var(--purple);
+  border-radius: 0.75em;
+  background-color: var(--green);
+  user-select: none;
+}
+.btn-large:active {
+  background-color: var(--purple);
+}
+.btn-large:focus {outline:none;}
+.btn-large::-moz-focus-inner {border:0;}
+
 .micropythons {
   display: flex;
   flex-wrap: wrap;
