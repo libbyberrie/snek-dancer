@@ -29,7 +29,7 @@ const Farm = ({ farm }) => {
   const updateSneks = () => {
     const lessThan10bois = micropythons < 10
     const micros = lessThan10bois ? (micropythons + 1) : 0;
-    const snektions = lessThan10bois ? (curlyboi_snektions + 1) : curlyboi_snektions;
+    const snektions = lessThan10bois ? curlyboi_snektions : (curlyboi_snektions + 1);
 
     setState({
       ...state,
