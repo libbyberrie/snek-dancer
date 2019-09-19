@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import key from "weak-key";
 import Snektion from "./Snektion";
 
 const Snek = ({ size, length, up }) => {
@@ -8,6 +7,7 @@ const Snek = ({ size, length, up }) => {
   for (var i = 0; i < length; i++) {
     snektion_array.push(<Snektion position={i} key={i} up={up} />)
   }
+
   return (
     <div className={"snek snek--" + size + " up-" + up }>
     { snektion_array }

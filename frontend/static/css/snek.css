@@ -1,12 +1,25 @@
 :root {
+  /* Defaults */
+  --font-main: 'PT Sans', sans-serif;
+
+  /* Snekky Colours! */
   --purple: #5b57a6;
   --green: #00b25a;
   --orange: #f3703a;
   --yellow: #ffc519;
   --red: #e11d43;
 }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  font-family: var(--font-main);
 }
 h1 {
   color: var(--green);
@@ -16,6 +29,45 @@ h1 {
   max-width: 40em;
   margin: 0 auto;
 }
+
+/* Root Level Container */
+.wrapper {
+  width: 100vw;
+  padding: 1em;
+}
+
+.farm {
+  padding: 0.15em 0 0.15em 0;
+  border-radius: 0.75em;
+  background-color: var(--purple);
+}
+
+.farm-section {
+  margin: 0.75em;
+  padding: 0.75em;
+  border-radius: 0.75em;
+  background-color: white;
+}
+
+.farm-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-large {
+  padding: 2em;
+  border: 2px solid var(--purple);
+  border-radius: 0.75em;
+  background-color: var(--green);
+  user-select: none;
+}
+.btn-large:active {
+  background-color: var(--purple);
+}
+.btn-large:focus {outline:none;}
+.btn-large::-moz-focus-inner {border:0;}
+
 .micropythons {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +76,7 @@ h1 {
   margin-right: 0.5em;
 }
 
-/* The snek */
+/* THE SNEKKY & CURLY BOIS */
 .snek {
   max-width: 100%;
   display: flex;
